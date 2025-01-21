@@ -1,21 +1,24 @@
 <?php
-
 namespace App\Controllers;
 
+use App\Core\Route;
 use App\Core\View;
 
 class HomeController
 {
+    #[Route('GET', '/')]
     public function index()
     {
         return View::render('home', ['message' => 'Bienvenue sur le framework !']);
     }
 
+    #[Route('GET', '/about')]
     public function about()
     {
         return "À propos de ce framework !";
     }
 
+    #[Route('GET', '/contact')]
     public function contact()
     {
         return View::render('contact', [
@@ -24,6 +27,7 @@ class HomeController
         ]);
     }
 
+    #[Route('GET', '/services')]
     public function services()
     {
         return View::render('services', [

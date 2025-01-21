@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Core\Router;
@@ -7,19 +6,16 @@ use App\Core\ErrorHandler;
 use App\Controllers\HomeController;
 use App\Controllers\UserController;
 
-
 try {
     session_start();
 
     $router = new Router();
 
-    // Routes principales
-    $router->add('GET', '/', [HomeController::class, 'index']);
-    $router->add('GET', '/about', [HomeController::class, 'about']);
-    $router->add('GET', '/contact', [HomeController::class, 'contact']);
-    $router->add('GET', '/services', [HomeController::class, 'services']);
-    $router->add('GET', '/users', [UserController::class, 'index']); // Nouvelle route
-
+    // Enregistrer automatiquement les routes à partir des contrôleurs
+    $router->registerRoutesFromControllers([
+        HomeController::class,
+        UserController::class
+    ]);
 
     // Page 404
     $router->setNotFound(function () {
