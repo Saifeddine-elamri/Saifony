@@ -53,14 +53,25 @@
             font-size: 0.9em;
             margin-bottom: 15px;
         }
+        .success {
+            color: green;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <form method="POST" action="/users/store">
         <h1>Ajouter un utilisateur</h1>
 
+        <!-- Affichage de l'erreur si présente -->
         <?php if (!empty($error)): ?>
             <p class="error"><?= htmlspecialchars($error) ?></p>
+        <?php endif; ?>
+
+        <!-- Affichage du succès si présent -->
+        <?php if (!empty($success)): ?>
+            <p class="success"><?= htmlspecialchars($success) ?></p>
         <?php endif; ?>
 
         <label for="name">Nom :</label>

@@ -23,7 +23,7 @@ class UserController
     #[Route('POST', '/users/store')]
     public function store()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+       
             $name = $_POST['name'] ?? null;
             $email = $_POST['email'] ?? null;
 
@@ -48,6 +48,6 @@ class UserController
                     'error' => 'Une erreur est survenue lors de l’enregistrement.'
                 ]);
             }
-        }
+        
     }
 }

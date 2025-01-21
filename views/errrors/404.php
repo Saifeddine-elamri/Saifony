@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>404 Not Found</title>
-</head>
-<body>
-    <h1>Page non trouvée</h1>
-</body>
-</html>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>La page que vous cherchez est introuvable.</p>
+        <p><a href="/">Retour à l'accueil</a></p>
+    </div>
