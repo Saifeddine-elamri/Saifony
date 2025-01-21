@@ -1,5 +1,14 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/Core/Router.php';
+require_once __DIR__ . '/../src/Core/ErrorHandler.php';
+require_once __DIR__ . '/../src/Controllers/HomeController.php';
+require_once __DIR__ . '/../src/Controllers/UserController.php';
+require_once __DIR__ . '/../src/Core/Route.php';
+require_once __DIR__ . '/../src/Core/View.php';
+require_once __DIR__ . '/../src/Core/Model.php';
+require_once __DIR__ . '/../src/Core/Database.php';
+require_once __DIR__ . '/../src/Models/User.php';
+
 
 use App\Core\Router;
 use App\Core\ErrorHandler;
